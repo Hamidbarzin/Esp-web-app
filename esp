@@ -4,9 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ESP Web App</title>
-    <link rel="icon" href="favicon.ico">
-    <link rel="apple-touch-icon" href="logo192.png">
-    <link rel="manifest" href="manifest.json">
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
@@ -27,6 +24,13 @@
         h1 {
             color: #333;
         }
+        .github-link {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            color: #0366d6;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -43,26 +47,9 @@
             <li>گزارش‌گیری جامع</li>
         </ul>
 
-        <div>
-            <a href="https://github.com/hamidbarzin/Esp-web-app" style="color: blue;">مشاهده در GitHub</a>
-        </div>
+        <a href="https://github.com/hamidbarzin/Esp-web-app" class="github-link">
+            مشاهده در GitHub
+        </a>
     </div>
-
-    <script>
-        // اسکریپت برای مدیریت هدایت صفحات تک‌صفحه‌ای
-        (function() {
-            var pathSegmentsToKeep = 1;
-            var l = window.location;
-            l.replace(
-                l.protocol + '//' + 
-                l.hostname + 
-                (l.port ? ':' + l.port : '') +
-                l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-                l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
-                (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-                l.hash
-            );
-        })();
-    </script>
 </body>
 </html>
