@@ -1,0 +1,59 @@
+:root {
+  /* Modern Blue Theme */
+  --primary: #3498db; /* Main Blue */
+  --primary-hover: #2980b9; /* Darker Blue */
+  --secondary: #2c3e50; /* Navy Blue */
+  --surface: #34495e; /* Dark Blue-Gray */
+  --surface-hover: #465c71; /* Lighter Surface */
+  --background: #f4f4f4; /* Light Gray Background */
+  --text: #2c3e50; /* Dark Text */
+  --text-secondary: #7f8c8d; /* Gray Text */
+  --border: #bdc3c7; /* Light Border */
+  --success: #27ae60; /* Green */
+  --shadow: rgba(52, 152, 219, 0.2); /* Blue Shadow */
+  --error: #e74c3c;
+
+  /* Gradients */
+  --card-gradient: linear-gradient(145deg, #fff 0%, #f8f9fa 100%);
+  --primary-gradient: linear-gradient(145deg, var(--primary) 0%, var(--primary-hover) 100%);
+  --hover-gradient: linear-gradient(145deg, var(--primary-hover) 0%, var(--primary) 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--background);
+  min-height: 100vh;
+  direction: rtl;
+  color: var(--text);
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Animation */
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 1.5rem;
+  }
+}
